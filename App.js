@@ -8,8 +8,9 @@ import CourseRoutes from "./Kanbas/courses/routes.js";
 import ModuleRoutes from "./Kanbas/modules/routes.js";
 import AssignmentsRoutes from "./Kanbas/assignments/routes.js";
 
-mongoose.connect(process.env.MONGO_LINK);
-// mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
+    || "mongodb://127.0.0.1:27017/kanbas"
+mongoose.connect(CONNECTION_STRING);
 const app = express()
 app.use(cors());
 app.use(express.json());
