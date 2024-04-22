@@ -9,7 +9,7 @@ const quizQuestionSchema = new mongoose.Schema({
   question_id: {type: String, required: true},
   type: {
     type: String,
-    enum: ["Multiple Choice Question", "True/False Question",
+    enum: ["Multiple Choice Question", "True False Question",
       "Multiple Blanks Question"],
     required: true
   },
